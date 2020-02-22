@@ -4,9 +4,17 @@ import (
 	"testing"
 )
 
-func TestHelloWorld(t *testing.T) {
+func Test_HelloWorld_01(t *testing.T) {
 	actual := HelloWorld("hoge")
-	expected := "hello world, hoge"
+	expected := "Hello World, hoge!"
+	if actual != expected {
+		t.Errorf("actual %v\nwant %v", actual, expected)
+	}
+}
+
+func Test_HelloWorld_02(t *testing.T) {
+	actual := HelloWorld("")
+	expected := "Hello World!"
 	if actual != expected {
 		t.Errorf("actual %v\nwant %v", actual, expected)
 	}

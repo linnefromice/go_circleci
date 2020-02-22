@@ -1,5 +1,10 @@
 package sample01
 
 func HelloWorld(s string) string {
-	return "hello world, " + s
+	base := "Hello World"
+	if s == "" {
+		return base + "!"
+	} else {
+		return base + ", " + s + "!"
+	}
 }
