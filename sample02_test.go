@@ -4,7 +4,7 @@ import (
 	"testing"
 )
 
-func Test_plus(t *testing.T) {
+func Test_plus_01(t *testing.T) {
 	num1 := 8
 	num2 := 4
 	actual := 12
@@ -14,7 +14,17 @@ func Test_plus(t *testing.T) {
 	}
 }
 
-func Test_minus(t *testing.T) {
+func Test_plus_02(t *testing.T) {
+	num1 := 0
+	num2 := -1
+	actual := -1
+	expected := plus(num1, num2)
+	if actual != expected {
+		t.Errorf("actual %v\nwant %v", actual, expected)
+	}
+}
+
+func Test_minus_01(t *testing.T) {
 	num1 := 8
 	num2 := 4
 	actual := 4
@@ -24,7 +34,17 @@ func Test_minus(t *testing.T) {
 	}
 }
 
-func Test_multiple(t *testing.T) {
+func Test_minus_02(t *testing.T) {
+	num1 := 0
+	num2 := -1
+	actual := 1
+	expected := minus(num1, num2)
+	if actual != expected {
+		t.Errorf("actual %v\nwant %v", actual, expected)
+	}
+}
+
+func Test_multiple_01(t *testing.T) {
 	num1 := 8
 	num2 := 4
 	actual := 32
@@ -34,10 +54,50 @@ func Test_multiple(t *testing.T) {
 	}
 }
 
-func Test_divide(t *testing.T) {
+func Test_multiple_02(t *testing.T) {
+	num1 := 0
+	num2 := -1
+	actual := 0
+	expected := multiple(num1, num2)
+	if actual != expected {
+		t.Errorf("actual %v\nwant %v", actual, expected)
+	}
+}
+
+func Test_multiple_03(t *testing.T) {
+	num1 := -5
+	num2 := -7
+	actual := 35
+	expected := multiple(num1, num2)
+	if actual != expected {
+		t.Errorf("actual %v\nwant %v", actual, expected)
+	}
+}
+
+func Test_divide_01(t *testing.T) {
 	num1 := 8
 	num2 := 4
 	actual := 2
+	expected := divide(num1, num2)
+	if actual != expected {
+		t.Errorf("actual %v\nwant %v", actual, expected)
+	}
+}
+
+func Test_divide_02(t *testing.T) {
+	num1 := 0
+	num2 := 4
+	actual := 0
+	expected := divide(num1, num2)
+	if actual != expected {
+		t.Errorf("actual %v\nwant %v", actual, expected)
+	}
+}
+
+func Test_divide_03(t *testing.T) {
+	num1 := -8
+	num2 := -8
+	actual := 1
 	expected := divide(num1, num2)
 	if actual != expected {
 		t.Errorf("actual %v\nwant %v", actual, expected)
