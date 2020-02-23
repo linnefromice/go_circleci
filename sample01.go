@@ -1,4 +1,4 @@
-package sample01
+package sample
 
 func HelloWorld(s string) string {
 	base := "Hello World"

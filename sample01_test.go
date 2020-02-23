@@ -1,4 +1,4 @@
-package sample01
+package sample
 
 import (
 	"testing"
